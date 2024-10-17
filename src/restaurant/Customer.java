@@ -9,7 +9,7 @@ public class Customer {
         this.order = new Order();  // Collaborating with Order class
     }
 
-    public void addMenuItemToOrder(MenuItem item) {
+    public void addToOrder(MenuItem item) {//Change the name of method addMenuItemToOrder to addToOrder//
         order.addItem(item);  // Collaborating with Order to add items
     }
 
@@ -18,3 +18,5 @@ public class Customer {
         order.printOrderDetails();  // Collaborating with Order to display order details
     }
 }
+
+
