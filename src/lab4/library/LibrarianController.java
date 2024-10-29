@@ -56,6 +56,11 @@ public class LibrarianController {
     	removeBook(b);
     	
     }
+    public void removeMember(int memberID) {
+    	Member m = findMember(memberID);
+    	removeMember(memberID);
+    	
+    }
  
    
 	
