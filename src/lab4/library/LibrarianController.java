@@ -22,7 +22,7 @@ public class LibrarianController {
  	}
      
      
-     public void addMember() {
+     public void addMember(int memberID,String name) {
     	 
      }
      
@@ -31,8 +31,12 @@ public class LibrarianController {
     	 
      }
 	 
+     public void showAvailableBooks() {
+    	 
+     }
      
 	public Book findBook(String title) {
+		library.findBook(title);
 		
 	}
     
