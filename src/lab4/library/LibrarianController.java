@@ -13,38 +13,51 @@ public class LibrarianController {
 	}
 	
      public void borrowBook(Member member, Book book) {
-		
+		library.borrowBook(member,book);
 		
 	}
      
      public void returnBook(Member member, Book book) {
+ 		library.returnBook(member,book);
  		
  	}
      
      
      public void addMember(int memberID,String name) {
+    	 library.addMember(memberID,name);
     	 
      }
      
      
-     public void showMembers() {
+     public String showMembers() {
+    	String s =  library.showMembers();
+    	return s;
     	 
      }
 	 
-     public void showAvailableBooks() {
-    	 
+     public String showAvailableBooks() {
+    	 String s = library.showAvailableBooks();
+    	 return s;
      }
      
 	public Book findBook(String title) {
-		library.findBook(title);
+		Book b = library.findBook(title);
+		return b;
 		
 	}
     
-    public Member findMemmber(int memberID) {
-    	library.findMember(memberID);
+    public Member findMember(int memberID) {
+         Member m  = library.findMember(memberID);
+        	 return m; 
+         }
+    	
+    public void removeBook(String title) {
+    	Book b = library.findBook(title);
+    	removeBook(b);
     	
     }
-	
+ 
+   
 	
 	
 	
