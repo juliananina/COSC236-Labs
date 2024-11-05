@@ -19,9 +19,11 @@ public class Member {
 	}
 	public void borrowBook(Book b) {
 		borrowedBooks.add(b);
+		b.borrow();
 	}
 	public void returnBook(Book b) {
 		borrowedBooks.remove(b);
+		b.returned();
 	}
 	public int getmemberId() {
 		return memberId;
