@@ -39,12 +39,16 @@ public class Library {
 		return null;
 	}
 
-	public void borrowBook(Book b, Member m) {
+	public void borrowBook(String title, int memberID) {
+		Member m = findMember(memberID);
+		Book b = findBook(title);
 		m.borrowBook(b);
 	}
 
-	public void returnBook(Book b, Member m) {
-		m.returnBook(b);
+	public void returnBook(String title, int memberID) {
+		Member m = findMember(memberID);
+		Book b = findBook(title);
+		m.returnBook(b);;
 	}
 
 	public void addMember(int memberID, String name) {
@@ -62,6 +66,7 @@ public class Library {
 	public String showAvailableBooks() {
 		String output = "";
 		for (Book b : catalog) {
+			if(b.getAvailabilty())
 			output += b.getTitle() + ", by: " + b.getAuthor() + "\n";
 		}
 		return output;

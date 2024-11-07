@@ -35,6 +35,9 @@ public class Book {
 	public void returned() {
 		isAvailable = true;
 	}
+	public boolean getAvailabilty() {
+		return this.isAvailable;
+	}
 	
 
 }
