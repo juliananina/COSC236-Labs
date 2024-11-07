@@ -67,7 +67,7 @@ public class Library {
 		String output = "";
 		for (Book b : catalog) {
 			if(b.getAvailabilty())
-			output += b.getTitle() + ", by: " + b.getAuthor() + "\n";
+			output += b.getTitle() + " by: " + b.getAuthor() + "\n";
 		}
 		return output;
 	}
