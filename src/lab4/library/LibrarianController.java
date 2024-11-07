@@ -12,13 +12,13 @@ public class LibrarianController {
 		
 	}
 	
-     public void borrowBook(Member member, Book book) {
-		library.borrowBook(member,book);
+     public void borrowBook(String title, int memberID) {
+		library.borrowBook(title,memberID);
 		
 	}
      
-     public void returnBook(Member member, Book book) {
- 		library.returnBook(member,book);
+     public void returnBook(String title, int memberID) {
+ 		library.returnBook(title,memberID);
  		
  	}
      //library doenst care about memebers
@@ -54,7 +54,7 @@ public class LibrarianController {
     	
     public void removeBook(String title) {
     	Book b = library.findBook(title);
-    	removeBook(b);
+    	library.removeBook(b);
     	
     }
     public void removeMember(int memberID) {
