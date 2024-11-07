@@ -21,8 +21,7 @@ public class LibrarianController {
  		library.returnBook(title,memberID);
  		
  	}
-     //library doenst care about memebers
-     //
+     
      
      public void addMember(int memberID,String name) {
     	 library.addMember(memberID,name);
